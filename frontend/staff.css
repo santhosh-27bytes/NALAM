@@ -1,0 +1,37 @@
+/* Staff dashboard uses the same design tokens as styles.css but a wide
+   desktop-style layout instead of the phone-width patient app shell. */
+.staff-body { display: block; }
+#staff-app { max-width: none; width: 100%; min-height: 100vh; background: var(--bg); }
+
+.staff-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 32px; background: var(--teal-deep); color: #fff;
+}
+.staff-header h1 { font-family: var(--font-display); font-weight: 600; font-size: 20px; margin: 0; }
+.staff-header p { font-size: 12.5px; color: rgba(255,255,255,0.7); margin: 2px 0 0; }
+
+.staff-body-content { padding: 24px 32px 48px; max-width: 1100px; margin: 0 auto; }
+
+.doctor-tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+
+.queue-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.queue-col { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+.queue-col h3 { font-family: var(--font-display); font-size: 14px; margin: 0 0 12px; display: flex; align-items: center; justify-content: space-between; }
+.queue-col h3 .count { font-family: var(--font-mono); font-size: 12px; color: var(--text-sub); font-weight: 400; }
+
+.staff-ticket { border: 1px solid var(--line); border-radius: 12px; padding: 12px; margin-bottom: 10px; background: var(--bg); }
+.staff-ticket .tok { font-family: var(--font-mono); font-size: 15px; font-weight: 600; }
+.staff-ticket .name { font-size: 13px; color: var(--ink); margin: 2px 0; }
+.staff-ticket .time { font-size: 11px; color: var(--text-sub); }
+.staff-ticket .actions { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+.staff-ticket .actions button {
+  font-size: 11.5px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--card);
+  font-family: var(--font-body); font-weight: 500; cursor: pointer;
+}
+.staff-ticket .actions button.primary { background: var(--teal); color: #fff; border-color: var(--teal); }
+.staff-ticket .actions button.danger { color: var(--coral); border-color: var(--coral); }
+
+.staff-empty { color: var(--text-sub); font-size: 12.5px; text-align: center; padding: 20px 0; }
+
+.staff-toolbar { display: flex; justify-content: flex-end; margin-bottom: 12px; }
+.staff-refresh-note { font-size: 11.5px; color: var(--text-sub); }
